@@ -9,6 +9,9 @@
 dl.score {
     font-family: 'pressstart2p';
     color: #FFFFFF;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .score-item{
 	width: 113px;
