@@ -1,13 +1,16 @@
 <html>
 <head>
-  <meta name="viewport" content="width=812px, initial-scale=1.0, minimum-scale=1.0, user-scalable=no;" />
+  <meta name="viewport" content="width=812, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+
+  <!-- <script type="text/javascript" src="js/main.js"></script> -->
   <link rel="stylesheet" href="./style.css" media="all">
   <title>マリオ</title>
 </head>
 <body>
 <div class="frame">
-  <div id="screen"></div>
-  
+  <div id="screen">
+  </div>
   <dl class="score">
     <div class="score-item">SCORE<div class="data">0</div></div>
     <div class="score-item">COINS<div class="data">0</div></div>
@@ -40,7 +43,22 @@
 
 <!-- Bootstrap & Mobile optimization tricks -->
 <script type="text/javascript">
+  //
   window.onReady(function onReady() {
+  jQuery(document).ready(function($){
+
+    console.log('run');
+
+    //full frame size
+    var frameSize = {"width": 3708, "height": 1280};
+    //contents canvas size
+    var canvasSize = {"width": 1704, "height": 640};
+    //viewport size
+    var viewSize = {"width": 811.428571, "height": 457.142857};
+    //(0,0)
+    var origin = {"x": 852, "y": 960};
+
+
     game.onload();
 
     // Mobile browser hacks
@@ -58,20 +76,32 @@
         me.video.onresize(null);
       }).defer();
 
+      /*
       me.event.subscribe(me.event.WINDOW_ONRESIZE, function (e) {
         window.scrollTo(0, 1);
       });
+      */
     }
+
+    //scroll method called from Objective-C
+    functionTable["scroll"] = function(x,y){
+      var left = origin.x + x;
+      var top = origin.y - viewSize.height - y;
+      window.scrollTo(left, top);
+
+      var debugmsg = "X:" + x + " / Y:" + y + " - Left:" + left + " / Top:" + top;
+      console.log(debugmsg);
+      $('#debugarea').html(debugmsg);
+    }
+
+    //initial point
+    entryPoint('scroll', 0, 0);
+  });
   });
 </script>
 
-
-
-
-</body>
-<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="js/entrypoint.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/test.js"></script>
+</body>
 
 </html>
