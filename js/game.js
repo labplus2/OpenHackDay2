@@ -45,7 +45,7 @@ var game = {
 		// add our player entity in the entity pool
 		me.entityPool.add("mainPlayer", game.PlayerEntity);
 		me.entityPool.add("CoinEntity", game.CoinEntity);
-		me.entityPool.add("EnemyEntity", game.EnemyEntity);
+		//me.entityPool.add("EnemyEntity", game.EnemyEntity);
 		//me.entityPool.add("BlockEntity", game.BlockEntity);
 		//me.entityPool.add("SweetEntity", game.SweetEntity);
 

@@ -52,23 +52,8 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup name="EnemyEntity" width="54" height="20">
-  <object name="CoinEntity" x="193" y="572" width="32" height="32">
-   <properties>
-    <property name="image" value="spinning_coin_gold"/>
-    <property name="spritewidth" value="32"/>
-   </properties>
-  </object>
-  <object name="CoinEntity" x="160" y="572" width="32" height="32">
-   <properties>
-    <property name="image" value="spinning_coin_gold"/>
-    <property name="spritewidth" value="32"/>
-   </properties>
-  </object>
- </objectgroup>
- <objectgroup name="CoinEntity" width="54" height="20">
-  <object name="EnemyEntity" x="480" y="544" width="256" height="64"/>
- </objectgroup>
+ <objectgroup name="EnemyEntity" width="54" height="20"/>
+ <objectgroup name="CoinEntity" width="54" height="20"/>
  <objectgroup name="sweet" width="54" height="20" visible="0"/>
  <objectgroup name="block" width="54" height="20" visible="0">
   <object name="SweetEntity" x="320" y="512" width="32" height="32"/>
