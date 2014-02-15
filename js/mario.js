@@ -80,7 +80,7 @@ jQuery(document).ready(function($){
 	    var rotateGamma = cut(rt.gamma);
 
 	    //横向きに水平に置いて、βが大きく変化したらいずれかにアオリが入ったとみなす
-	    var rotateBeta = cut(rt.beta);
+	    var rotateBeta = cut(rt.beta) + cut(rt.alpha);
 
 	    //jump check
 	    if(!jumpTimerID){

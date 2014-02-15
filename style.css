@@ -46,8 +46,18 @@ body {
   top:0px;
   width:3708px;
   height: 1280px;
-  background: black;
 }
+
+#infoframe{
+	background: white;
+	color:black;
+}
+
+#marioframe{
+	background: black;
+	color:white;
+}
+
 #screen {
   position:absolute;
   left:852px;
