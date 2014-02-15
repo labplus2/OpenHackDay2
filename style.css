@@ -1,3 +1,20 @@
+@font-face {
+    font-family: 'pressstart2p';
+    src: url('fonts/pressstart2p-webfont.eot');
+    src: url('fonts/pressstart2p-webfont.eot?iefix') format('eot'),
+         url('fonts/pressstart2p-webfont.woff') format('woff'),
+         url('fonts/pressstart2p-webfont.ttf') format('truetype'),
+         url('fonts/pressstart2p-webfont.svg#webfontjSpbZQRv') format('svg');
+}
+dl.score {
+    font-family: 'pressstart2p';
+    color: #FFFFFF;
+}
+.score-item{
+	width: 113px;
+	float: left;
+	text-align: center;
+}
 body {
   width: 1704px;
   height: 640px;
