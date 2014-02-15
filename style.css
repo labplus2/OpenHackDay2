@@ -57,10 +57,11 @@ body {
 }
 
 #screen canvas {
-	margin: auto;
-
-	/* Hide the gap for font descenders. */
+	/* margin: auto; */
+	margin: 0;
 	display: block;
+	width: 1704px !important;
+	height: 640px !important;
 	
 	/* disable scaling interpolation */
 	image-rendering: optimizeSpeed;
