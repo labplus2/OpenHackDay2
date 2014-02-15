@@ -1,11 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+<meta charset="UTF-8">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
   <title>Mario controler</title>
+  <style type="text/css">
+
+  body{
+  	background:black;
+  	color:gray;
+  	font-size:small;
+  }
+  img.mario{
+  	height:128px;
+  }
+  </style>
 </head>
 <body>
-	<h1>mario</h1>
+<div id="wrapper">
+        <h1 id="debug">DEVICE MOTION</h1>
+
+        <h1 id="dir">
+        	<img class="mario" id="run_right" src="data/img/run_right.gif" />
+        	<img class="mario" id="mario_right" src="data/img/mario_right.gif" />
+        	<img class="mario" id="jump_right" src="data/img/jump_right.gif" />
+        	<img class="mario" id="run_left" src="data/img/run_left.gif" />
+        	<img class="mario" id="mario_left" src="data/img/mario_left.gif" />
+         	<img class="mario" id="jump_left" src="data/img/jump_left.gif" />
+      	</h1>
+
+      	<!--
+            <h2>ACCELERATION</h2>
+            <p class="status" id="ac0">X:</p>
+            <p class="status" id="ac1">Y:</p>
+            <p class="status" id="ac2">Z:</p>
+            <h2>ACCELERATION INCLUDING GRAVITY</h2>
+            <p class="status" id="ag0">X:</p>
+            <p class="status" id="ag1">Y:</p>
+            <p class="status" id="ag2">Z:</p>
+        -->
+            <h2>ROTATION RATE</h2>
+            <p class="status" id="rt0">ALPHA:</p>
+            <p class="status" id="rt1">BETA:</p>
+             <p class="status" id="rt2">GAMMA:</p>
+   </div>
 </body>
 
 <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
