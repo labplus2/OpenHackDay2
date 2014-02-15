@@ -71,3 +71,9 @@ body {
 	image-rendering: optimize-contrast;
 	-ms-interpolation-mode: nearest-neighbor;
 }
+
+.coin-block {
+  position: absolute;
+  left: 1350px;
+  top: 663px;
+}
