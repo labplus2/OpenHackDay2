@@ -41,8 +41,23 @@ var game = {
 	"loaded" : function () {
 		me.state.set(me.state.MENU, new game.TitleScreen());
 		me.state.set(me.state.PLAY, new game.PlayScreen());
+	     
+		// add our player entity in the entity pool
+		me.entityPool.add("mainPlayer", game.PlayerEntity);
+		me.entityPool.add("CoinEntity", game.CoinEntity);
+		me.entityPool.add("EnemyEntity", game.EnemyEntity);
+		//me.entityPool.add("BlockEntity", game.BlockEntity);
+		//me.entityPool.add("SweetEntity", game.SweetEntity);
 
-		// Start the game.
+		// enable the keyboard
+		me.input.bindKey(me.input.KEY.LEFT,  "left");
+		me.input.bindKey(me.input.KEY.RIGHT, "right");
+		me.input.bindKey(me.input.KEY.SPACE, "jump", true);
+		me.input.bindKey(me.input.KEY.X,     "enlarge", true);
+
+
+		// start the game 
 		me.state.change(me.state.PLAY);
+
 	}
 };
