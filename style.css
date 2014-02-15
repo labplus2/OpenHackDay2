@@ -6,6 +6,7 @@
          url('fonts/pressstart2p-webfont.ttf') format('truetype'),
          url('fonts/pressstart2p-webfont.svg#webfontjSpbZQRv') format('svg');
 }
+
 dl.score {
     font-family: 'pressstart2p';
     color: #FFFFFF;
@@ -13,13 +14,30 @@ dl.score {
     left: 0;
     top: 0;
 }
+
 .score-item{
 	width: 113px;
 	float: left;
 	text-align: center;
 }
+
 body {
-  margin: 0;
+	background-color: #000;
+	color: #fff;
+
+	/* Allow mouse dragging. */
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	
+	/* disable touch panning/zooming */
+	-ms-touch-action: none;
+	touch-action: none;
+
+	/* Allow canvas to hit the edges of the browser viewport. */
+	margin: 0;
 }
 
 .frame{
@@ -30,112 +48,25 @@ body {
   height: 1280px;
   background: black;
 }
-.screen {
+#screen {
   position:absolute;
   left:852px;
   top: 320px;
   width: 1704px !important;
   height: 640px !important;
-  background: url('./images/png/ground.png') #5c94fc repeat-x bottom;
 }
 
-.cloud-a {
-  position: absolute;
-  background: url('./images/png/cloud-a.png') ;
-  width: 64px;
-  height: 48px;
-}
-.cloud-b {
-  position: absolute;
-  background: url('./images/png/cloud-b.png') ;
-  width: 96px;
-  height: 48px;
-}
-.cloud-c {
-  position: absolute;
-  background: url('./images/png/cloud-c.png') ;
-  width: 128px;
-  height: 48px;
-}
-.clouds div:nth-child(2n+1) {
-  top: 300px;
-}
-.clouds div:nth-child(2n) {
-  top: 270px;
-}
-.cloud-1 {
-  left: 240px;
-}
-.cloud-2 {
-  left: 480px;
-}
-.cloud-3 {
-  left: 770px;
-}
-.cloud-4 {
-  left: 1000px;
-}
-.cloud-5 {
-  left: 1340px;
-}
-.cloud-6 {
-  left: 1540px;
-}
+#screen canvas {
+	margin: auto;
 
-.mountain-a {
-  position: absolute;
-  background: url('./images/png/mountain-a.png') ;
-  width: 96px;
-  height: 38px;
-  top: 556px;
-}
-.mountain-b {
-  position: absolute;
-  background: url('./images/png/mountain-b.png') ;
-  width: 160px;
-  height: 70px;
-  top: 524px;
-}
-.mountain-1 {
-  left: 0px;
-}
-.mountain-2 {
-  left: 550px;
-}
-.mountain-3 {
-  left: 800px;
-}
-.mountain-4 {
-  left: 1300px;
-}
-
-.plant-a {
-  position: absolute;
-  background: url('./images/png/plant-a.png') ;
-  width: 64px;
-  height: 32px;
-  top: 562px;
-}
-.plant-b {
-  position: absolute;
-  background: url('./images/png/plant-b.png') ;
-  width: 96px;
-  height: 32px;
-  top: 562px;
-}
-.plant-c {
-  position: absolute;
-  background: url('./images/png/plant-c.png') ;
-  width: 128px;
-  height: 32px;
-  top: 562px;
-}
-.plant-1 {
-  left: 415px;
-}
-.plant-2 {
-  left: 980px;
-}
-.plant-3 {
-  left: 1200px;
+	/* Hide the gap for font descenders. */
+	display: block;
+	
+	/* disable scaling interpolation */
+	image-rendering: optimizeSpeed;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-crisp-edges;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: optimize-contrast;
+	-ms-interpolation-mode: nearest-neighbor;
 }
