@@ -40,12 +40,34 @@ body {
 	margin: 0;
 }
 
+.box{
+	display:-webkit-box;
+}
+.fill{
+	-webkit-box-flex:1;
+}
+
+.vertical{
+	-webkit-box-orient:vertical;
+}
+.horizontal{
+	-webkit-box-orient:horizontal;
+}
+.center{
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+}
+
 .frame{
   position:absolute;
   left:0px;
   top:0px;
   width:3708px;
   height: 1280px;
+}
+
+.hide{
+	display:none;
 }
 
 #infoframe{
