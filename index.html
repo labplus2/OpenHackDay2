@@ -1,6 +1,6 @@
 <html>
 <head>
-  <meta name="viewport" content="width=812, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=568, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
   <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
 
   <!-- <script type="text/javascript" src="js/main.js"></script> -->
@@ -9,7 +9,9 @@
 </head>
 <body>
 <div class="frame">
-  <div id="screen">
+  <div id="screen" style="border: dotted 2px orange;">
+<div class="debug" style="position:absolute; top:0px; left:0px; width:568px; height:320px; border:dotted 2px pink; background:rgba(255,0,0,0.5);"></div>
+ 
   </div>
   <dl class="score">
     <div class="score-item">SCORE<div class="data">0</div></div>
@@ -19,9 +21,9 @@
     <div class="score-item">LIVES<div class="data">3</div></div>
   </dl>
 
+  
 </div>
 
-<div class="debug" style="position:absolute; top:0px; left:0px; width:568px; height:320px; border:dotted 1px black"></div>
 <div id="debugarea" class="debug" style="position: fixed;right: 0;top: 0; color:#fff; border:dotted 1px white;">***</div>
 
 
@@ -41,67 +43,14 @@
 <script type="text/javascript" src="js/screens/title.js"></script>
 <script type="text/javascript" src="js/screens/play.js"></script>
 
-<!-- Bootstrap & Mobile optimization tricks -->
-<script type="text/javascript">
-  //
-  window.onReady(function onReady() {
-  jQuery(document).ready(function($){
-
-    console.log('run');
-
-    //full frame size
-    var frameSize = {"width": 3708, "height": 1280};
-    //contents canvas size
-    var canvasSize = {"width": 1704, "height": 640};
-    //viewport size
-    var viewSize = {"width": 811.428571, "height": 457.142857};
-    //(0,0)
-    var origin = {"x": 852, "y": 960};
 
 
-    game.onload();
-
-    // Mobile browser hacks
-    if (me.device.isMobile && !navigator.isCocoonJS) {
-      // Prevent the webview from moving on a swipe
-      window.document.addEventListener("touchmove", function (e) {
-        e.preventDefault();
-        window.scroll(0, 0);
-        return false;
-      }, false);
-
-      // Scroll away mobile GUI
-      (function () {
-        window.scrollTo(0, 1);
-        me.video.onresize(null);
-      }).defer();
-
-      /*
-      me.event.subscribe(me.event.WINDOW_ONRESIZE, function (e) {
-        window.scrollTo(0, 1);
-      });
-      */
-    }
-
-    //scroll method called from Objective-C
-    functionTable["scroll"] = function(x,y){
-      var left = origin.x + x;
-      var top = origin.y - viewSize.height - y;
-      window.scrollTo(left, top);
-
-      var debugmsg = "X:" + x + " / Y:" + y + " - Left:" + left + " / Top:" + top;
-      console.log(debugmsg);
-      $('#debugarea').html(debugmsg);
-    }
-
-    //initial point
-    entryPoint('scroll', 0, 0);
-  });
-  });
-</script>
 
 <script type="text/javascript" src="js/entrypoint.js"></script>
+<!-- Bootstrap & Mobile optimization tricks -->
+<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/test.js"></script>
+
 </body>
 
 </html>
