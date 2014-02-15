@@ -1,5 +1,47 @@
 body {
-  width: 3072px;
-  height: 1436px;
+  width: 1704px;
+  height: 640px;
   background: url('./images/png/ground.png') #5c94fc repeat-x bottom;
+}
+.cloud-a {
+  position: absolute;
+  background: url('./images/png/cloud-a.png') ;
+  width: 64px;
+  height: 48px;
+}
+.cloud-b {
+  position: absolute;
+  background: url('./images/png/cloud-b.png') ;
+  width: 96px;
+  height: 48px;
+}
+.cloud-c {
+  position: absolute;
+  background: url('./images/png/cloud-c.png') ;
+  width: 128px;
+  height: 48px;
+}
+.clouds div:nth-child(2n+1) {
+  top: 300px;
+}
+.clouds div:nth-child(2n) {
+  top: 270px;
+}
+.cloud-1 {
+  left: 240px;
+}
+.cloud-2 {
+  left: 480px;
+}
+.cloud-3 {
+  left: 770px;
+}
+.cloud-4 {
+  left: 1000px;
+}
+.cloud-5 {
+  left: 1340px;
+}
+.cloud-6 {
+  left: 1540px;
 }
