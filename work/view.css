@@ -1,0 +1,53 @@
+
+
+div.case{
+	position:absolute;
+	width:1704px;
+	height:640px;
+	background:gray;
+}
+
+div.screen{
+	position:absolute;
+	width:568px;
+	height:320px;
+
+}
+
+div.x1{
+	left:0px;
+}
+div.x2{
+	left:568px;
+}
+div.x3{
+	left:1136px;
+}
+div.y1{
+	top:0px;
+}
+div.y2{
+	top:320px;
+}
+div.y3{
+	top:640px;
+}
+
+div.red{
+	background: red;
+}
+div.blue{
+	background: blue;
+}
+div.green{
+	background: green;
+}
+div.orange{
+	background: orange;
+}
+div.pink{
+	background: pink;
+}
+div.yellow{
+	background: yellow;
+}
