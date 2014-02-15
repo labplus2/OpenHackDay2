@@ -15,10 +15,17 @@ jQuery(document).ready(function($){
 		var left = x;
 		var top = canvasSize.height - viewSize.height - y;
 		window.scrollTo(left, top);
-		console.log("X:", x, " / Y:", y, " - Left:", left, " / Top:", top);
+
+		var debugmsg = "X:" + x + " / Y:" + y + " - Left:" + left + " / Top:" + top;
+		console.log(debugmsg);
+		$('#debugarea').html(debugmsg);
 	}
 
 	$('#test1').bind('click', function(){
 		entryPoint('scroll', 0, 180);
 	})
+
+
+	//init
+	entryPoint('scroll', 0, 0);
 });
