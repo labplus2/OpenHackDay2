@@ -58,6 +58,14 @@ body {
 	color:white;
 }
 
+.view{
+	position:absolute;
+	width:640px; 
+	height:480px;
+	border: dotted 1px gray;
+}
+
+
 #screen {
   position:absolute;
   left:852px;

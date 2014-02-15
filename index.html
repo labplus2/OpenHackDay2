@@ -11,14 +11,33 @@
 <body>
 
 
-<div id="infoframe" class="frame">
+<div id="infoframe" class="frame" style="">
+
+<div id="resort" style="position:absolute; top:0px; left:866px;"><img src="data/img/resort.jpg" style="width:2048px; height:1364px;" /></div>
+
+<div>
+  <div class="view" style="left:1570px; top:480px;">
   <h1>swing panorama</h1>
+  </div>
+
+  <div class="view" style="left:2210px; top:480px;">
+  <h1>panel 2</h1>
+  </div>
+
+  <div class="view" style="left:1570px; top:0px;">
+  <h1>panel 3</h1>
+  </div>
+
+  <div class="view" style="left:930px; top:480px;">
+  <h1>panel 4</h1>
+  </div>
 </div>
+</div><!-- infoframe -->
 
 
 <div id="marioframe" class="frame" style="display:none;">
   <div id="screen" style="border: dotted 2px orange;">
-<div class="debug" style="position:absolute; top:0px; left:0px; width:568px; height:320px; border:dotted 2px pink; background:rgba(255,0,0,0.5);"></div>
+<div class="debug view" style="top:0px; left:0px; background:rgba(255,0,0,0.5);"></div>
  
   </div>
   <dl id="scorebar" class="score">
@@ -30,8 +49,8 @@
     <div class="dummy btn">coinBlock</div>
   </dl>
 
-    <div class="coin-block"><img src="data/img/hatena-block.gif" /></div>
-    <div class="mamenoki-block"><img src="data/img/block.gif" /></div>
+    <div id="coin" class="coin-block"><img src="data/img/hatena-block.gif" /></div>
+    <div id="mamenoki" class="mamenoki-block"><img src="data/img/block.gif" /></div>
   
 </div>
 
@@ -66,9 +85,9 @@
 <script type="text/javascript" src="js/entrypoint.js"></script>
 <!-- Bootstrap & Mobile optimization tricks -->
 <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/test.js"></script>
 <script type="text/javascript" src="js/event.js"></script>
 
+<!-- script type="text/javascript" src="js/test.js"></script -->
 </body>
 
 </html>
