@@ -19,10 +19,14 @@ dl.score {
 	text-align: center;
 }
 body {
-  width: 1704px;
-  height: 640px;
+  margin: 0;
+}
+.screen {
+  width: 1704px !important;
+  height: 640px !important;
   background: url('./images/png/ground.png') #5c94fc repeat-x bottom;
 }
+
 .cloud-a {
   position: absolute;
   background: url('./images/png/cloud-a.png') ;
@@ -64,4 +68,62 @@ body {
 }
 .cloud-6 {
   left: 1540px;
+}
+
+.mountain-a {
+  position: absolute;
+  background: url('./images/png/mountain-a.png') ;
+  width: 96px;
+  height: 38px;
+  top: 556px;
+}
+.mountain-b {
+  position: absolute;
+  background: url('./images/png/mountain-b.png') ;
+  width: 160px;
+  height: 70px;
+  top: 524px;
+}
+.mountain-1 {
+  left: 0px;
+}
+.mountain-2 {
+  left: 550px;
+}
+.mountain-3 {
+  left: 800px;
+}
+.mountain-4 {
+  left: 1300px;
+}
+
+.plant-a {
+  position: absolute;
+  background: url('./images/png/plant-a.png') ;
+  width: 64px;
+  height: 32px;
+  top: 562px;
+}
+.plant-b {
+  position: absolute;
+  background: url('./images/png/plant-b.png') ;
+  width: 96px;
+  height: 32px;
+  top: 562px;
+}
+.plant-c {
+  position: absolute;
+  background: url('./images/png/plant-c.png') ;
+  width: 128px;
+  height: 32px;
+  top: 562px;
+}
+.plant-1 {
+  left: 415px;
+}
+.plant-2 {
+  left: 980px;
+}
+.plant-3 {
+  left: 1200px;
 }
