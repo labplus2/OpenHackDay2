@@ -43,6 +43,8 @@ body {
 
 h1{
 	text-align:center;
+	font-weight:normal;
+	font-size:36pt;
 }
 .box{
 	display:-webkit-box;
@@ -116,6 +118,10 @@ h1{
 	-ms-interpolation-mode: nearest-neighbor;
 }
 
+strong{
+	font-weight:bold;
+}
+
 .coin-block {
   position: absolute;
   left: 1350px;
@@ -136,5 +142,10 @@ h1{
 	width:640px;
 	height:480px;
 	font-family: 'pressstart2p';
-	font-size:24pt;
+	font-size:16pt;
+}
+
+
+#slide_1{
+	font-family: 'pressstart2p';
 }
