@@ -121,5 +121,16 @@ body {
 .mamenoki-block {
   position: absolute;
   left: 1658px;
-  top: 501px;
+  top: 500px;
+}
+
+
+#thanks{
+	position:absolute;
+	left:1338px;
+	top:120px;
+	width:640px;
+	height:480px;
+	font-family: 'pressstart2p';
+	font-size:24pt;
 }
