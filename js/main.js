@@ -27,15 +27,82 @@
 
     var changeMode = function(mode){
       if(mode == 'mario'){
-        $('#marioframe').show();
+        $('#marioframe').fadeIn();
         $('#infoframe').hide();
       }
       else if(mode == 'resort'){
-        $('#resort').show();
+        $('#resort').fadeIn();
       }
     } 
 
-
+    var startTime = null;
+    var intervalTimerID = null;
+    var countDown = function(){
+      var time = Math.floor((((new Date()).getTime()) - startTime) / 1000);
+      var count = 90 - time;
+      $('#time').html(count);
+      if(count == 0){
+        window.clearInterval(intervalTimerID);
+      }
+    }
+    var do3rd = function(){
+      entryPoint('fire', 2);
+      console.log('85sec');
+    }
+    var do2nd = function(){
+      changeMode('mario');
+      console.log('30sec');
+      window.setTimeout(do3rd, 55000);
+    }
+    var do1st = function(){
+      changeMode('resort');
+      console.log('20sec');
+      window.setTimeout(do2nd, 10000);
+    }
+    var startTimer = function(){
+      window.setTimeout(do1st, 20000);
+      startTime = (new Date()).getTime();
+      intervalTimerID = window.setInterval(countDown, 1000);
+    }
+    /*
+    var startTimer = function(){
+      startTime = (new Date()).getTime();
+      intervalTimerID = setInterval(function(){
+        var time = (new Date()).getTime();
+        var count = time - startTime;
+        console.log(count);
+        //expire
+        if(count > 90000){
+          console.log('90sec');
+          clearInterval(intervalTimerID);
+        }
+        //85sec
+        else if(!timerFlag.mamenoki && count > 85000){
+          console.log('85sec');
+          setTimeout(function(){
+          entryPoint('fire', 2);
+            timerFlag.mamenoki = true;
+          }, 0);
+        }
+        //30sec
+        else if(!timerFlag.mario && count > 30000){
+          console.log('30sec');
+          setTimeout(function(){
+          changeMode('#mario');
+            timerFlag.mario = true;
+          }, 0);
+        }
+        //20sec
+        else if(!timerFlag.resort && count > 20000){
+          console.log('20sec');
+          setTimeout(function(){
+          changeMode('#resort');
+            timerFlag.resort = true;
+          }, 0);
+        }
+      }, 100);
+    }
+    */
 
 
 
@@ -54,8 +121,7 @@
 
     //start method
     functionTable["start"] = function(){
-
-      changeMode('mario');
+      startTimer();
     }
 
     //event method
@@ -76,9 +142,13 @@
 
     //test
     $('#infoframe').bind('click', function(){
-      entryPoint('start');
-    //  changeMode('mario');
+    //  entryPoint('start');
+      changeMode('resort');
     });
+
+    $('#resort').bind('click',function(){
+      changeMode('mario');
+    })
 
     $('#coin').bind('click', function(){
       entryPoint('fire', 1);
@@ -88,6 +158,8 @@
     });
 
 
+ //   changeMode('mario');
+    startTimer();
   });
 
 
