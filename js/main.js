@@ -57,7 +57,12 @@
     var doCoin = function(){
       enteryPoint('fire', 1);
     }
+    var doStartSlide = function(){
+      $('#slide_2').show();
+      $('#slide_1').hide();
+    }
     var startTimer = function(){
+      window.setTimeout(doStartSlide, 1000);
       window.setTimeout(do1st, 20000);
       window.setTimeout(do2nd, 30000);
       //window.setTimeout(doCoin, 80000);
@@ -143,8 +148,8 @@
 
     //test
     $('#infoframe').bind('click', function(){
-    //  entryPoint('start');
-      changeMode('resort');
+      entryPoint('start');
+    //  changeMode('resort');
     });
 
     $('#resort').bind('click',function(){
@@ -160,7 +165,7 @@
 
 
  //   changeMode('mario');
-    startTimer();
+ //   startTimer();
   });
 
 
