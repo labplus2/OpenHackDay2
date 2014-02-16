@@ -90,7 +90,7 @@ h1{
 	position:absolute;
 	width:640px; 
 	height:480px;
-	border: dotted 1px gray;
+	border: none 1px gray;
 }
 
 
@@ -124,7 +124,7 @@ strong{
 
 .coin-block {
   position: absolute;
-  left: 1350px;
+  left: 1570px;
   top: 663px;
 }
 
