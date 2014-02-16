@@ -27,11 +27,11 @@
 
     var changeMode = function(mode){
       if(mode == 'mario'){
-        $('#marioframe').fadeIn();
-        $('#infoframe').hide();
+        $('#marioframe').fadeIn(1000);
+        $('#infoframe').fadeOut(1000);
       }
       else if(mode == 'resort'){
-        $('#resort').fadeIn();
+        $('#resort').fadeIn(1000);
       }
     } 
 
@@ -47,20 +47,21 @@
     }
     var do3rd = function(){
       entryPoint('fire', 2);
-      console.log('85sec');
     }
     var do2nd = function(){
       changeMode('mario');
-      console.log('30sec');
-      window.setTimeout(do3rd, 55000);
     }
     var do1st = function(){
       changeMode('resort');
-      console.log('20sec');
-      window.setTimeout(do2nd, 10000);
+    }
+    var doCoin = function(){
+      enteryPoint('fire', 1);
     }
     var startTimer = function(){
       window.setTimeout(do1st, 20000);
+      window.setTimeout(do2nd, 30000);
+      //window.setTimeout(doCoin, 80000);
+      window.setTimeout(do3rd, 85000);
       startTime = (new Date()).getTime();
       intervalTimerID = window.setInterval(countDown, 1000);
     }

@@ -10,6 +10,8 @@
   	background:black;
   	color:gray;
   	font-size:small;
+ 	margin: 0;
+ 	padding:0;
   }
   img.mario{
   	height:256px;
@@ -17,10 +19,28 @@
   .hidden{
   	display:none;
   }
+
+ .box{
+	display:-webkit-box;
+}
+.fill{
+	-webkit-box-flex:1;
+}
+
+.vertical{
+	-webkit-box-orient:vertical;
+}
+.horizontal{
+	-webkit-box-orient:horizontal;
+}
+.center{
+	-webkit-box-align:center;
+	-webkit-box-pack:center;
+}
   </style>
 </head>
 <body>
-<div id="wrapper">
+<div id="wrapper" class="box vertical center">
         <h1 id="debug" class="hidden">DEVICE MOTION</h1>
 
         <h1 id="dir">
